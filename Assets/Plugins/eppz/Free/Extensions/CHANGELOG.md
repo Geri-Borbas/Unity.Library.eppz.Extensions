@@ -1,3 +1,7 @@
+* 0.0.13
+
+	+ `README` now located in module folder
+
 * 0.0.1
 
 	+ Added `README` to the top level
