@@ -1,3 +1,7 @@
+* 0.0.2
+
+	+ Removed project folder structure
+
 * 0.0.13
 
 	+ `README` now located in module folder
