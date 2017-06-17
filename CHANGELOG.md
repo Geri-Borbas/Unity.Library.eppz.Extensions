@@ -1,5 +1,9 @@
 # eppz.Extensions
 
+* 0.0.3
+
+	+ Ignore `.meta` files (no value for script assets)
+
 * 0.0.2
 
 	+ Removed project folder structure
