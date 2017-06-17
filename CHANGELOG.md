@@ -1,5 +1,9 @@
 # eppz.Extensions
 
+* 0.0.31
+
+	+ Namespace fix
+
 * 0.0.3
 
 	+ Ignore `.meta` files (no value for script assets)

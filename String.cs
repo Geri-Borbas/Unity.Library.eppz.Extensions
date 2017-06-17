@@ -9,7 +9,7 @@ using UnityEngine;
 using System.Collections;
 
 
-namespace EPPZ.Free.Extensions
+namespace EPPZ.Extensions
 {
 
 
