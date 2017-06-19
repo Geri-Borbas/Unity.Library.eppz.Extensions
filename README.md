@@ -1,4 +1,5 @@
 # eppz.Extensions
+> part of [**Unity.Library.eppz**](https://github.com/eppz/Unity.Library.eppz)
 
 * `String_Extensions`
 
