@@ -1,9 +1,13 @@
 # eppz.Extensions
 > part of [**Unity.Library.eppz**](https://github.com/eppz/Unity.Library.eppz)
 
-* `String_Extensions`
+## `String_Extensions`
 
-    + Some string utility for the everyday. See [`String.cs`](String.cs) for more.
+* Some string utility for the everyday.
+    + `RemoveLastWord()`
+        + Removes the last word (the last remaining part after the last space occured) of the string. Like, `"A multi-worded sentence.".RemoveLastWord()` gives you `"A multi-worded"`.
+    + `IsNullOrWhiteSpace()` and `IsNullOrEmptyOrWhiteSpace()`
+        + Adds `String.IsNullOrWhiteSpace()` string extensions that is only introduced in .NET 4. See test cases in [`Editor/Test/String.cs`](Editor/Test/String.cs) for more.
 
 ## License
 

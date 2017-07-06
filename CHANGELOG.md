@@ -1,5 +1,9 @@
 # eppz.Extensions
 
+* 0.0.32
+
+	+ `NUnit` tests (see [`Editor/Test/String.cs`](Editor/Test/String.cs))
+
 * 0.0.31
 
 	+ Namespace fix

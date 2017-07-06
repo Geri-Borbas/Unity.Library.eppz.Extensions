@@ -39,7 +39,7 @@ namespace EPPZ.Extensions
 		{
 			return string.IsNullOrEmpty(value) ||
 				ReferenceEquals(value, null) ||
-					string.IsNullOrEmpty(value.Trim(' '));
+					string.IsNullOrEmpty(value.Trim());
 		}
 
 		public static string RemoveLastWord(this string value)
