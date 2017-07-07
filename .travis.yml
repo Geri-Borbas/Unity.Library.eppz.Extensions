@@ -1,0 +1,9 @@
+﻿language: csharp
+script:
+  - xbuild /p:Configuration=Debug Editor/Test/Test.sln
+before_install:
+  - sudo apt-get install nunit-console
+before_script:
+  - nuget restore Editor/Test/Test.sln
+after_script:
+  - nunit-console Editor/Test/bin/Debug/Test.dll

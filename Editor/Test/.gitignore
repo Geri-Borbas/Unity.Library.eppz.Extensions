@@ -1,0 +1,4 @@
+﻿# Ignore test files
+bin
+obj
+*.userprefs
