@@ -5,6 +5,7 @@
 *.meta
 
 ### Ignore test files
+packages
 bin
 obj
 *.userprefs
