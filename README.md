@@ -1,5 +1,6 @@
-# eppz.Extensions
+# eppz.Extensions 
 > part of [**Unity.Library.eppz**](https://github.com/eppz/Unity.Library.eppz)
+[![Build Status](https://travis-ci.org/eppz/Unity.Library.eppz.Extensions.png?branch=master)](https://travis-ci.org/eppz/Unity.Library.eppz.Extensions.png)
 
 ## `String_Extensions`
 
