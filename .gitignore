@@ -3,3 +3,8 @@
 
 ### Ignore meta (Unity)
 *.meta
+
+### Ignore test files
+bin
+obj
+*.userprefs

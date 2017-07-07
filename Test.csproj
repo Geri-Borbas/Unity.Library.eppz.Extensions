@@ -29,18 +29,17 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="String.cs">
-      <Link>Test\String.cs</Link>
-    </Compile>
+    <Reference Include="NUnit.Framework">
+      <HintPath>Editor\Test\NUnit\nunit.framework.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
-    <Folder Include="Test\" />
+    <None Include=".gitignore" />
+    <None Include=".travis.yml" />
   </ItemGroup>
   <ItemGroup>
-    <None Include=".travis.yml" />
-    <None Include=".gitignore" />
+    <Compile Include="String.cs" />
+    <Compile Include="Editor\Test\String.cs" />
   </ItemGroup>
 </Project>
