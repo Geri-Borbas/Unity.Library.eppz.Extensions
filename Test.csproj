@@ -29,8 +29,13 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
-    <Reference Include="NUnit.Framework">
+    <Reference Include="NUnit.Framework (Travis)">
       <HintPath>packages\NUnit.3.7.1\lib\net45\nunit.framework.dll</HintPath>
+    </Reference>      
+    <Reference Include="NUnit.Framework (Local)">
+      <HintPath>..\..\..\..\..\..\Packages\NUnit\NUnit.3.7.1\lib\net45\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework">
     </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
