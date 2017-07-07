@@ -2,8 +2,6 @@
 before_install:
   - sudo nuget install -OutputDirectory packages NUnit -Version 3.7.1
   - sudo nuget install -OutputDirectory packages NUnit.Console -Version 3.6.1
-before_script:
-  - nuget restore Test.sln
 script:
-  - xbuild /p:Configuration=Debug Test.sln
+  - xbuild /p:Configuration=Debug Test.csproj
   - mono packages/NUnit.ConsoleRunner.3.6.1/tools/nunit3-console.exe bin/Debug/Test.dll
