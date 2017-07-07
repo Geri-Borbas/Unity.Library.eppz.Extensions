@@ -6,4 +6,4 @@ before_install:
 before_script:
   - nuget restore Test.sln
 after_script:
-  - nunit-console Editor/Test/bin/Debug/Test.dll
+  - nunit-console bin/Debug/Test.dll
