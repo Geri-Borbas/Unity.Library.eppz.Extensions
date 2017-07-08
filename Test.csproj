@@ -14,11 +14,12 @@
     <SchemaVersion>2.0</SchemaVersion>
   </PropertyGroup>
 
-  <!-- Local -->
+  <!-- `Local` configuration -->
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Local|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
+    <IntermediateOutputPath>..\..\..\..\obj</IntermediateOutputPath> <!-- In Unity project root (outside `Assets` folder) --> 
     <OutputPath>..\..\..\..\bin</OutputPath> <!-- In Unity project root (outside `Assets` folder) -->
     <DefineConstants>DEBUG;</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
@@ -26,10 +27,11 @@
     <ConsolePause>false</ConsolePause>
   </PropertyGroup>
 
-  <!-- Travis -->
+  <!-- `Travis` configuration -->
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Travis|AnyCPU' ">
     <DebugType>full</DebugType>
     <Optimize>true</Optimize>
+    <IntermediateOutputPath>obj</IntermediateOutputPath>
     <OutputPath>bin</OutputPath>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -39,9 +41,11 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="NUnit.Framework (Local)">
+      <!-- Installed on my MacBook -->
       <HintPath>/Users/eppz/Projects/Unity/Packages/NUnit/NUnit.3.7.1/lib/net45/nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="NUnit.Framework (Travis)">
+      <!-- Installed on Travis (see `before_install` in `.travis.yml`) -->
       <HintPath>packages\NUnit.3.7.1\lib\net45\nunit.framework.dll</HintPath>
     </Reference>
   </ItemGroup>
