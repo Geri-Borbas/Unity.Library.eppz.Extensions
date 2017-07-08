@@ -1,50 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  
+  <!-- All configurations -->
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Configuration Condition=" '$(Configuration)' == '' ">Local</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{DFE0DEA6-0BEA-45D8-A203-39F02683F127}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>Test</RootNamespace>
-    <AssemblyName>Test</AssemblyName>
+    <RootNamespace>EPPZ.Extensions.Test</RootNamespace>
+    <AssemblyName>EPPZ.Extensions.Test</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+
+  <!-- Local -->
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Local|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>bin\Debug</OutputPath>
+    <OutputPath>..\..\..\..\bin</OutputPath> <!-- In Unity project root (outside `Assets` folder) -->
     <DefineConstants>DEBUG;</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+
+  <!-- Travis -->
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Travis|AnyCPU' ">
     <DebugType>full</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>bin\Release</OutputPath>
+    <OutputPath>bin</OutputPath>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
   </PropertyGroup>
+
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="NUnit.Framework (Local)">
+      <HintPath>/Users/eppz/Projects/Unity/Packages/NUnit/NUnit.3.7.1/lib/net45/nunit.framework.dll</HintPath>
+    </Reference>
     <Reference Include="NUnit.Framework (Travis)">
       <HintPath>packages\NUnit.3.7.1\lib\net45\nunit.framework.dll</HintPath>
-    </Reference>      
-    <Reference Include="NUnit.Framework (Local)">
-      <HintPath>..\..\..\..\..\..\Packages\NUnit\NUnit.3.7.1\lib\net45\nunit.framework.dll</HintPath>
-    </Reference>
-    <Reference Include="nunit.framework">
     </Reference>
   </ItemGroup>
+
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+
   <ItemGroup>
     <None Include=".gitignore" />
     <None Include=".travis.yml" />
   </ItemGroup>
+
+  <!-- Source files -->
   <ItemGroup>
     <Compile Include="String.cs" />
     <Compile Include="Editor\Test\String.cs" />
   </ItemGroup>
+  
 </Project>
