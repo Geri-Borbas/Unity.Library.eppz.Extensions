@@ -1,5 +1,10 @@
 # eppz.Extensions
 
+* 0.0.33
+
+	+ Removed local test project
+		+ Editor tests run at `Unity.Test.eppz`
+
 * 0.0.32
 
 	+ `NUnit` tests (see [`Editor/Test/String.cs`](Editor/Test/String.cs))
