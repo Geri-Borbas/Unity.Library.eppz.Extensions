@@ -30,7 +30,7 @@ namespace EPPZ.Extensions.Editor.Test
 		}
 
 		[TearDown]
-		public void TeaerDown()
+		public void TearDown()
 		{
 
 		}
