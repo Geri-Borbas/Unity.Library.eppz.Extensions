@@ -1,5 +1,9 @@
 # eppz.Extensions
 
+* 0.0.34
+
+	+ Merged pull request `#1`
+
 * 0.0.33
 
 	+ Removed local test project
