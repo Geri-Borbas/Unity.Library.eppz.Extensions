@@ -8,6 +8,8 @@
         + Removes the last word (the last remaining part after the last space occured) of the string. Like, `"A multi-worded sentence.".RemoveLastWord()` gives you `"A multi-worded"`.
     + `IsNullOrWhiteSpace()` and `IsNullOrEmptyOrWhiteSpace()`
         + Adds `String.IsNullOrWhiteSpace()` string extensions that is only introduced in .NET 4. See test cases in [`Editor/Test/String.cs`](Editor/Test/String.cs) for more.
+    + `Reverse()`
+        + Reverse a string using `System.Array.Reverse()`.
 
 ## License
 

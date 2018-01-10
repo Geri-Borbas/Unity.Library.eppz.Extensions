@@ -85,5 +85,24 @@ namespace EPPZ.Extensions.Editor.Test
 				""
 				);
 		}
+
+		[Test]
+		public void Reverse()
+		{
+			Assert.AreEqual(
+				"A multi-worded sentence.".Reverse(),
+				".ecnetnes dedrow-itlum A"
+				);
+
+			Assert.AreEqual(
+				"Word".Reverse(),
+				"Word"
+				);
+
+			Assert.AreEqual(
+				"".Reverse(),
+				""
+				);
+		}
 	}
 }

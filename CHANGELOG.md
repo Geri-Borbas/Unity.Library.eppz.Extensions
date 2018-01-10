@@ -1,5 +1,9 @@
 # eppz.Extensions
 
+* 0.0.35
+
+	+ `Reverse()` (with tests)
+
 * 0.0.34
 
 	+ Merged pull request `#1`
