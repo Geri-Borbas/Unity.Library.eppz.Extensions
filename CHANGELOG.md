@@ -1,5 +1,10 @@
 # eppz.Extensions
 
+
+* 0.0.36
+
+	+ Fixed `Reverse()` test
+
 * 0.0.35
 
 	+ `Reverse()` (with tests)
