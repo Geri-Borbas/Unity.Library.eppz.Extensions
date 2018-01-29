@@ -7,6 +7,8 @@
 //
 using UnityEngine;
 using System.Collections.Generic;
+using System.Text;
+using System;
 
 
 namespace EPPZ.Extensions
@@ -18,7 +20,6 @@ namespace EPPZ.Extensions
 
 
 		// Mainly from http://stackoverflow.com/questions/3174152/isnulloremptyorwhitespace-problem-in-c-sharp
-
 
 		public static bool IsNullOrWhiteSpace(this string value)
 		{
@@ -58,5 +59,20 @@ namespace EPPZ.Extensions
 	   		System.Array.Reverse(characters);
 		    return new string(characters);
 		}
+
+		public static string MD5(this string value)
+		{
+			System.Security.Cryptography.MD5 md5 = System.Security.Cryptography.MD5.Create();
+			StringBuilder stringBuilder = new StringBuilder();
+            byte[] hash = md5.ComputeHash(Encoding.UTF8.GetBytes(value));
+            for (int i = 0; i < hash.Length; i++)
+            { stringBuilder.Append(hash[i].ToString("x2")); }
+            return stringBuilder.ToString();
+		}
+
+		// From https://www.codeproject.com/Articles/1014073/Fastest-method-to-remove-all-whitespace-from-String
+
+		public static string RemoveWhitespace(this string value)
+		{ return string.Concat(value.Split(default(string[]), StringSplitOptions.RemoveEmptyEntries)); }
 	}
 }

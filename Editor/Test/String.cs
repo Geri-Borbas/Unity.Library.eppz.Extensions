@@ -104,5 +104,53 @@ namespace EPPZ.Extensions.Editor.Test
 				""
 				);
 		}
+
+		[Test]
+		public void MD5()
+		{
+			Assert.AreEqual(
+				"A multi-worded sentence.".MD5(),
+				"8451b8aaacdab7f8906c5cf4d05a10a2"
+				);
+
+			Assert.AreEqual(
+				"Word".MD5(),
+				"07a094a210794e74a0e5e1a1457a92ee"
+				);
+
+			Assert.AreEqual(
+				"".MD5(),
+				"d41d8cd98f00b204e9800998ecf8427e"
+				);
+		}
+
+		[Test]
+		public void RemoveWhitespace()
+		{
+			Assert.AreEqual(
+				"A   multi-worded,   \n multi-lined   \n sentence.".RemoveWhitespace(),
+				"Amulti-worded,multi-linedsentence."
+				);
+
+			Assert.AreEqual(
+				"A  multi-worded   sentence.".RemoveWhitespace(),
+				"Amulti-wordedsentence."
+				);
+
+			Assert.AreEqual(
+				"A multi-worded sentence.".RemoveWhitespace(),
+				"Amulti-wordedsentence."
+				);
+
+			Assert.AreEqual(
+				"Word".RemoveWhitespace(),
+				"Word"
+				);
+
+			Assert.AreEqual(
+				"".RemoveWhitespace(),
+				""
+				);
+		}
 	}
 }

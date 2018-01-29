@@ -1,6 +1,10 @@
 # eppz.Extensions
 
 
+* 0.0.38
+
+	+ Added `MD5()` and `RemoveWhitespace()` (with tests)
+
 * 0.0.36
 
 	+ Fixed `Reverse()` test
